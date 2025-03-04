@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace App\JobExportStrategies;
 
-use App\Entity\Job;
 use App\Enum\JobExportFormat;
-use XMLWriter;
 
-class ExportStrartegyXmlLimited extends ExportStrartegyXml
+readonly class ExportStrartegyXmlLimited extends ExportStrartegyXml
 {
-    protected array $serializerOptions = [
+    protected const SERIALIZER_OPTIONS = [
         'encoder_ignored_node_types' => [
             XML_PI_NODE,
         ],

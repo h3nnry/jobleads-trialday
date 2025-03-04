@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace App\JobExportStrategies;
 
 use App\Enum\JobExportFormat;
-use XML_PI_NODE;
 use Symfony\Component\Serializer\SerializerInterface;
+use XML_PI_NODE;
 
-class ExportStrartegyXml implements ExportStrategyInterface
+readonly class ExportStrartegyXml implements ExportStrategyInterface
 {
-    protected array $serializerOptions = [
+    protected const SERIALIZER_OPTIONS = [
         'encoder_ignored_node_types' => [
             XML_PI_NODE,
         ],
         'use_string_slice' => false,
     ];
 
-    public function __construct(private readonly SerializerInterface $serializer)
+    public function __construct(private SerializerInterface $serializer)
     {
     }
 
@@ -38,18 +38,12 @@ class ExportStrartegyXml implements ExportStrategyInterface
 
         foreach ($data as $entity) {
 
-            $xmlChunk = $this->serializer->serialize($entity, 'xml', $this->serializerOptions);
+            $xmlChunk = $this->serializer->serialize($entity, 'xml', static::SERIALIZER_OPTIONS);
             fwrite($fileHandler, $xmlChunk);
         }
 
         fwrite($fileHandler, "</root>");
         fclose($fileHandler);
-    }
-
-
-    protected function getColumn(string $column): string
-    {
-        return $column;
     }
 
 }
