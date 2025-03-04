@@ -1,0 +1,7 @@
+Development Task 1:
+
+There are two files file1.txt and file2.csv containing Integer values. Write a programme that outputs
+
+a) The elements of file1.txt first and then the elements of file2.csv
+b) The elements of both files in ascending order
+c) The intersection of the elements of both files

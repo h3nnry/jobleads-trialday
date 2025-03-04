@@ -1,0 +1,3 @@
+Admin Tasks
+
+Please save all steps you did / that were needed to solve each task in a file "Solution Task X.txt" in the folder of each task.

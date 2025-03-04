@@ -1,0 +1,27 @@
+{
+  "name": "my-poorly-optimized-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "bootstrap-vue": "^2.22.0",
+    "core-js": "^3.25.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "nuxt": "^2.15.8",
+    "three": "^0.156.1",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2"
+  }
+}

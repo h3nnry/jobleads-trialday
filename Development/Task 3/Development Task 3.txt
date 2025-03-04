@@ -1,0 +1,20 @@
+Development Task 3
+
+Develop the feature "jobexport".
+
+Part 1:
+	Write the jobexport itself with the following requirements:
+	- The job data should be stored in a database in a table "job" and contain the following fields: id, name, description, company
+	- The export should be able to handle three export formats (maybe more later):
+		- CSV
+		- XML
+		- XML with limited description (max 100 chars, "..." at the end if longer)
+
+Part 2:
+	Write a frontend for the export with these requirements:
+	- The frontend should be accessible via browser
+	- The user should be able to start the export
+	- It should be possible to choose the format of the export
+	- The user should be able to add an email to which the export is sent after it has been created
+	
+	

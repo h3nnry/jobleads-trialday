@@ -1,0 +1,3 @@
+Refactoring Task 1:
+
+The file calculator.php contains some code that has potential for optimisation. Refactor it in any way you think will make it better :-).

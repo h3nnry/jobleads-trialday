@@ -1,0 +1,8 @@
+Development Task 2:
+
+Write a programme that can handle n students (first name, last name) and their grades in three classes. The
+programme should be able to output the following data:
+
+a) A list of all students with their personal average grade
+b) The average grade of all students for each class
+c) The overall average grade
