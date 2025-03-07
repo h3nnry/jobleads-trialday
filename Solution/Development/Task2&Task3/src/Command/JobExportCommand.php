@@ -32,7 +32,7 @@ class JobExportCommand extends Command
     {
         $this
             ->addArgument('format', InputArgument::REQUIRED,
-                sprintf('Export format: %s.', $this->getExportFormatsAsString())
+                sprintf('Export format: %s.', JobExportFormat::getExportFormatsAsString())
             );
     }
 
@@ -41,8 +41,8 @@ class JobExportCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $format = $input->getArgument('format');
 
-        if (!in_array($format, $this->getExportFormatsAsArray())) {
-            $io->error(sprintf('Invalid format. Allowed values: %s.', $this->getExportFormatsAsString()));
+        if (!in_array($format, JobExportFormat::getExportFormatsAsArray())) {
+            $io->error(sprintf('Invalid format. Allowed values: %s.', JobExportFormat::getExportFormatsAsString()));
             return Command::FAILURE;
         }
 
@@ -58,13 +58,4 @@ class JobExportCommand extends Command
         }
     }
 
-    private function getExportFormatsAsArray(): array
-    {
-        return array_column(JobExportFormat::cases(), 'value');
-    }
-
-    private function getExportFormatsAsString(): string
-    {
-        return implode(', ', $this->getExportFormatsAsArray());
-    }
 }
